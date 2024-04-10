@@ -1,0 +1,17 @@
+module KabanosKatan
+{
+	imports
+	{
+		Base,
+	}
+	
+	recipe Make Katanaka
+	{
+        Plank,
+		Result 		: Katanaka,
+		Sound 		: BreakWoodItem,
+		Time 		: 50,
+		Category 		: Weapons,
+		SkillRequired 		: MetalWelding=0,
+	}
+}

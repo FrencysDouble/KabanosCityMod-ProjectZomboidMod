@@ -1,0 +1,26 @@
+module Base
+{
+	model Katanaka
+	{
+		mesh = Weapons/2handed/katanaka,
+		texture = Weapons/2handed/katanaka_texture,
+	}
+	
+	model Kamach
+	{
+		mesh = Weapons/1handed/kamach,
+		texture = Weapons/2handed/katanaka_texture,
+	}
+	
+	model lom
+	{
+		mesh = Weapons/1handed/lom,
+		texture = Weapons/2handed/katanaka_texture,
+	}
+
+	model Kaspear
+	{
+	    mesh = Weapons/2handed/kaspear,
+	    texture = Weapons/2handed/katanaka_texture,
+	}
+}
