@@ -13,12 +13,19 @@ local function get_item()
     end
 end
 
---local function hand_wound_randomizer()
-    --local rumbleroll = ZombRand(100)
-    --if rumbleroll <= 80 then
-      --  getPlayer():getBodyDamage():getBodyPart(BodyPartType.Hand_R):AddDamage(1)
-   -- end
---end
+local function hand_wound_randomizer()
+    local inv = getPlayer():getInventory()
+    local lom = inv:FindAndReturn("KabanosKatan.Lom")
+    if getPlayer():getPrimaryHandItem() == lom then
+        print("Lom Attacked")
+        local rumbleroll = ZombRand(100)
+        if rumbleroll <= 80 then
+            local wound_hand_r = getPlayer():getBodyDamage():getBodyPart(BodyPartType.Hand_R)
+            wound_hand_r:setBleeding(true)
+            wound_hand_r:setBleedingTime(10)
+        end
+    end
+end
 
 Events.OnEquipPrimary.Add(get_item)
---Events.OnWeaponSwing.Add(hand_wound_randomizer())
+Events.OnWeaponSwing.Add(hand_wound_randomizer)
