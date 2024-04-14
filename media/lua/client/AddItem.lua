@@ -19,7 +19,7 @@ local function hand_wound_randomizer()
     if getPlayer():getPrimaryHandItem() == lom then
         print("Lom Attacked")
         local rumbleroll = ZombRand(100)
-        if rumbleroll <= 80 then
+        if rumbleroll <= 5 then
             local wound_hand_r = getPlayer():getBodyDamage():getBodyPart(BodyPartType.Hand_R)
             wound_hand_r:setBleeding(true)
             wound_hand_r:setBleedingTime(10)
